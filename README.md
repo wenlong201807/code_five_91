@@ -15,3 +15,4 @@
 9. 怎么在md里添加超链接？
 10. 加分：创建自己喜欢的刷题markdown笔记模板，模板内可以包含题目名称，题目链接，题目思路，题目解体的code，时间和空间复杂度。
   - [模版](https://github.com/wenlong201807/code_five_91/blob/main/template.md)
+11. [打卡处](https://github.com/wenlong201807/code_five_91/issues/1)
