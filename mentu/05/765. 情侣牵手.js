@@ -1,28 +1,20 @@
 /**
- * @param {number[][]} stones
+ * @param {number[]} row
  * @return {number}
- * 思路
- * 要求每一个石头的横纵坐标上，除了本身外，不能存在其他的石头。
- * 因此，可以把同一个横坐标或者纵坐标上的石头看作是一个连通的；
- * 
- * 每次获取两个石头的坐标(x,y),然后进行判断，如果两个石头处于同一个横坐标或同一个纵坐标，就进行合并，直到遍历完整个数组；
- * 每次合并完之后，就会减少一个石头，记录一下合并了多少次，合并的次数就是移除石头的个数
+ * 遍历row数组，每次都取出来两个人，默认情况下情侣的编号是从0开始的
+ * 一对正确的情侣就是一个偶数和一个奇数；并且 奇数 = 偶数+1；以及 奇数/2 == 偶数/2;符合这样的条件才是正确的一对情侣
+ * 否则，就需要将两个编号除以2之后的结果进行连通，进行交换次数。
+ * 当n-1 对配对成功的时候，最后一对也会配对成功，我们只需要记录连通合并的次数。这就是需要调整的次数。
  */
-var removeStones = function (stones) {
-  let stoneNum = stones.length;
-  let uf = new UnionFind(stoneNum);
-  for (let i = 0; i < stoneNum; i++) { // 拿第一块石头
-    for (let j = 0; j < stoneNum; j++) { // 拿第二块石头
-      let [x1, y1] = stones[i];
-      let [x2, y2] = stones[j];
-      if (x1 === x2 || y1 === y2) {
-        uf.unite(i, j);
-      }
-    }
+var minSwapsCouples = function (row) {
+  let len = row.length;
+  let N = len >> 1;// 右移一位，相当于除以2
+  let uf = new UnionFind(N);
+  for (let i = 0; i < len; i += 2) {// 跳着循环，每次取两个值
+    uf.unite(row[i] >> 1, row[i + 1] >> 1);// 拿到这两个人之后，都给除以2，进行连通
   }
 
-  // 原有的石头总数量 - 合并完的石头数量 = 剩余石头数量
-  return stoneNum - uf.getCount();
+  return N - uf.getCount();
 };
 
 // 并查集的模板
