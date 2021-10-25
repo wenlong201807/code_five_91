@@ -1,0 +1,7 @@
+
+// 轮播图片效果 
+// 参考资料 https://www.cnblogs.com/jiangxiaobo/p/5695831.html
+// https://www.cnblogs.com/jiangxiaobo/p/5695930.html
+// 三 https://www.cnblogs.com/jiangxiaobo/p/5695947.html
+// 四 https://www.cnblogs.com/jiangxiaobo/p/5696001.html // 自定义div
+// 五 https://www.cnblogs.com/jiangxiaobo/p/5696016.html
