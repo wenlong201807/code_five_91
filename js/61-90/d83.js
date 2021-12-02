@@ -36,3 +36,5 @@ var strStr = function (haystack, needle) {
 // 链接：https://leetcode-cn.com/problems/implement-strstr/solution/kmpsuan-fa-js-by-xxxx__-fgi5/
 // 来源：力扣（LeetCode）
 // 著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
+
+// 参考学习 https://leetcode-cn.com/problems/implement-strstr/solution/duo-tu-yu-jing-xiang-jie-kmp-suan-fa-by-w3c9c/
