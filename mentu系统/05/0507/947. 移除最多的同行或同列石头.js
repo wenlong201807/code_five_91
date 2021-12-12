@@ -1,4 +1,5 @@
 /**
+ * 通过
  * @param {number[][]} stones
  * @return {number}
  * 思路

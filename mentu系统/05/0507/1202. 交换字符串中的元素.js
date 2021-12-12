@@ -1,4 +1,5 @@
 /**
+ * 通过
  * @param {string} s
  * @param {number[][]} pairs
  * @return {string}
