@@ -4,6 +4,9 @@
  * @param {number[]} nums
  * @param {number} k
  * @return {number[]}
+ * map+数组：
+ * map 记录每一个元素出现的次数、频率
+ * 数组进行排序
  */
 var topKFrequent = function (nums, k) {
   let map = new Map()

@@ -13,6 +13,7 @@
  * @param {number} k
  * @return {number}
  */
+// 迭代
 var kthSmallest = function (root, k) {
   let stack = []
   let node = root

@@ -6,15 +6,13 @@
  * @return {number}
  */
 var frequencySort = function (s) {
-  // debugger
   let map = new Map()
   let ans = '';
   for (let w of s) {
     map.set(w, (map.get(w) || 0) + 1);
   }
 
-  map = new Map([...map].sort((v1, v2) => v2[1] - v1[1]))
-  console.log(map)
+  map = new Map([...map].sort((v1, v2) => v2[1] - v1[1]));
 
   for (let [k, v] of map) {
     console.log('k, v:', k, v)
@@ -23,7 +21,6 @@ var frequencySort = function (s) {
     }
   }
 
-  console.log(ans)
   return ans;
 };
 
