@@ -1,0 +1,40 @@
+
+
+
+linux 系统中自带了安装工具yum
+检查yum 存在？
+
+1 安装nginx
+yum install nginx
+2 查看nginx 在哪里
+whereis nginx
+3 进入对应的sbin，启动nginx
+cd /usr/sbin
+4 执行 ./nginx
+
+5 查看是否启动 nginx
+ps -aux | grep nginx
+
+6 其他相关操作
+启动：/usr/local/nginx/sbin/nginx
+停止/重新加载：/usr/local/nginx/sbin/nginx -s stop(quit、reload)
+验证配置文件是否合法：/usr/local/nginx/sbin/nginx -t
+命令帮助：/usr/local/nginx/sbin/nginx -h
+
+参考资料 原文链接：https://blog.csdn.net/grhlove123/article/details/47834673
+
+
+
+操作之前需要确认的
+1 确认系统网络联通
+ping www.baidu.com 可访问
+
+2 确认yum可用
+yum -y install gcc gcc-c++ autoconf pcre pcre-devel make automake
+yum -y install wget httpd-tools vim
+
+3 确认关闭iptables 规则(防火墙)
+参考资料 https://blog.csdn.net/weixin_44792344/article/details/109674599
+
+4 确认停用selinux
+参考资料 https://blog.csdn.net/jay_youth/article/details/80327599
