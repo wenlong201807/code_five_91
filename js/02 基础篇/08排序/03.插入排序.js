@@ -1,16 +1,14 @@
 function sortArray(nums) {
   const n = nums.length;
   for (let i = 1; i < n; i++) {
-    // debugger
-    t = nums[i];
-    j = i - 1;
-    while (j > -1 && nums[j] > t) {
-      // debugger
+    let t = nums[i]; // 暂存当前值
+    let j = i - 1;// 已经排好序的最后一个
+    while (j > -1 && nums[j] > t) {// 原来排好序中的更大值，调换到当前位置
       nums[i] = nums[j]; // 与下一行等效
       // nums[j + 1] = nums[j];
       j -= 1;
     }
-    nums[j + 1] = t;
+    nums[j + 1] = t;// 找到当前值应该在排好序的正确位置，更新
   }
   console.info(nums);
   return nums;

@@ -14,6 +14,7 @@ arr为原始数组，从最低位开始取每个位组成radix数组；
 
 基数排序的空间复杂度为O(n+k)，其中k为桶的数量。一般来说n>>k，因此额外空间需要大概n个左右。
 */
+// 此版本有错误
 var counter = [];
 function radixSort(arr, maxDigit) {
   var mod = 10;
@@ -36,5 +37,43 @@ function radixSort(arr, maxDigit) {
       }
     }
   }
+  console.info('排序后arr:', arr);
   return arr;
 }
+
+const arr = [8, 90, 15, 77, 2, 33, 5, 45, 6, 10];
+const maxDigit = 9;
+// const arr = [8, 9, 1, 7, 2, 3, 5, 4, 6, 0];
+// const maxDigit = 9;
+radixSort(arr, maxDigit);
+
+// 正确版本
+// 基数排序
+function radix_sort (A) {
+  const max = Math.max(...A); // 获取当前数组中最大值
+  const buckets = Array.from({length:10},() => []); // 生成二维数组的方式
+  // 有效位数
+  let m = 1
+  while (m < max) {
+    // 将数组放入桶中
+    A.forEach(number => {
+      const digist = ~~( (number%(m*10))/m )// ～～ === Math.floor()
+      buckets[digist].push(number)
+    })
+    // 从桶中取出元素
+    let j = 0
+    buckets.forEach(bucket => {// 二维数组，每个桶为子数组，可能有多个值，先进先出
+      while (bucket.length > 0) {
+        A[j++] = bucket.shift()
+      }
+    })
+    // 下一个位置
+    m*=10// 个位，十位，百位
+  }
+}
+
+const A = [8, 96, 15, 72, 2, 36, 5, 49, 6, 10];
+// const A = [8, 90, 15, 77, 2, 33, 5, 45, 6, 10];
+// const A = [10,200,13,12,7,88,91,24]
+radix_sort(A)
+console.log(A)
