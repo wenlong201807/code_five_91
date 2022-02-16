@@ -39,7 +39,7 @@ MyQueue.prototype.peek = function () {
     }
   }
   let num = this.popStack.pop();
-  this.popStack.push(num);
+  this.popStack.push(num); // 这里不是真的删除掉，只是获取第一个，需要把他放回去
   return num;
 };
 

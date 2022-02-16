@@ -2,6 +2,10 @@
  * 通过 https://leetcode-cn.com/problems/remove-outermost-parentheses/submissions/
  * @param {string} s
  * @return {string}
+ * 备注： opened++ > 0   
+ * 运行过程为： 
+ * 1 opened > 0 比较完之后，
+ * 2 再 opened = opened + 1
  */
 var removeOuterParentheses = function (s) {
   let res = '';
@@ -16,3 +20,7 @@ var removeOuterParentheses = function (s) {
   }
   return res;
 };
+
+const s = '(())()'
+var re = removeOuterParentheses(s);
+console.log(re)

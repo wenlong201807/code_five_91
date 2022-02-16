@@ -2,8 +2,10 @@
  * 通过 https://leetcode-cn.com/problems/longest-well-performing-interval/submissions/
  * @param {number[]} hours
  * @return {number}
+ * 简单说明版本 https://leetcode-cn.com/problems/longest-well-performing-interval/solution/qian-zhui-he-dan-diao-zhan-by-muyids/
  */
 var longestWPI = function (hours) {
+  debugger
   // 将大于8的认为为1 小于等于8的为-1 然后 求整个数组的前缀和
   let preSum = new Array(hours.length + 1).fill(0);
   for (let i = 0; i < hours.length; i++) {
@@ -28,3 +30,6 @@ var longestWPI = function (hours) {
 
   return max;
 };
+
+const hours = [9,9,6,0,6,6,9];
+longestWPI(hours);

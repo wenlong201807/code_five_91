@@ -8,11 +8,11 @@ var calculate = function (s) {
   let stack = new Array();
   let preSign = '+';
   let num = 0;
-  for (let i = 0; i < s.length; i++){
+  for (let i = 0; i < s.length; i++) {
     if (!isNaN(s[i]) && s[i] !== ' ') {
       num = num * 10 + Number(s[i]);
     }
-    if (isNaN(s[i]) || i == s.length - 1) {
+    if (isNaN(s[i]) || i == s.length - 1) { // 最后一个字符还没有经过符号元算纳入数组中
       switch (preSign) {
         case '+':
           stack.push(num);
@@ -24,7 +24,7 @@ var calculate = function (s) {
           stack.push(stack.pop() * num);
           break;
         default:
-          stack.push(stack.pop() / num | 0);
+          stack.push((stack.pop() / num) | 0);
           break;
       }
       preSign = s[i];
@@ -33,3 +33,7 @@ var calculate = function (s) {
   }
   return stack.reduce((a, b) => a + b);
 };
+
+
+const s = '3+2*2';
+calculate(s);

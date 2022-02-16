@@ -37,8 +37,11 @@ var reorderList = function (head) {
   }
   right = left.next;
   left.next = null;
+
   left = head;
+
   right = reverse(right);
+  
   while (left && right) {
     let lNext = left.next;
     let rNext = right.next;
@@ -47,5 +50,6 @@ var reorderList = function (head) {
     left = lNext;
     right = rNext;
   }
+  
   return hair.next;
 };

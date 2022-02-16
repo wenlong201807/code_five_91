@@ -19,10 +19,12 @@ var splitListToParts = function (head, k) {
     len++;
     node = node.next;
   }
+
   let itemLen = Math.floor(len / k);
   let curry = len % k;// 余数，每一个curry项，多一个元素
   let m = 0;// curry 计数
   let result = [];
+
   let dummyHead = new ListNode(0);
   dummyHead.next = head;
   for (let i = 0; i < k; i++) {
@@ -32,12 +34,15 @@ var splitListToParts = function (head, k) {
       node = node ? node.next : null;
       j++;
     }
+
     if (m < curry) {
       node = node ? node.next : null;
       m++;
     }
+
     result.push(dummyHead.next || null);
     let next = node.next || null;
+    
     if (node) node.next = null;
     dummyHead.next = next;
   }
