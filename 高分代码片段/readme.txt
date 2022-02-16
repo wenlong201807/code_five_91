@@ -15,4 +15,9 @@ github
 [不那么着急看] js版数据结构与算法 https://github.com/axing521/js-algo
 
 
+[重要][大厂面试过程复盘(微信/阿里/头条,附答案篇)] 
+https://github.com/LuckyWinty/blog/blob/master/markdown/interview/%E9%9D%A2%E8%AF%95%E5%A4%8D%E7%9B%98.md
+或者
+https://mp.weixin.qq.com/s?__biz=MzI0MzIyMDM5Ng==&mid=2649829027&idx=2&sn=1a433047a8d6e8af65012bfa0bd27e3f&chksm=f175e460c6026d76bcdfc6dd42cfe80a3f14ea832d1922d65043f666d6de22bd17b09e779ed9&scene=21#wechat_redirect
 
+[核心仓库] https://github.com/LuckyWinty/blog/tree/master/markdown
