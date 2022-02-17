@@ -21,3 +21,6 @@ https://github.com/LuckyWinty/blog/blob/master/markdown/interview/%E9%9D%A2%E8%A
 https://mp.weixin.qq.com/s?__biz=MzI0MzIyMDM5Ng==&mid=2649829027&idx=2&sn=1a433047a8d6e8af65012bfa0bd27e3f&chksm=f175e460c6026d76bcdfc6dd42cfe80a3f14ea832d1922d65043f666d6de22bd17b09e779ed9&scene=21#wechat_redirect
 
 [核心仓库] https://github.com/LuckyWinty/blog/tree/master/markdown
+
+[中中中点][源码系列学习] vue源码 https://www.bilibili.com/video/BV1bS4y1T7ng/
+[中中中点][源码系列学习] element ui源码https://www.bilibili.com/video/BV19h411h7Se/?spm_id_from=333.788.recommend_more_video.14
