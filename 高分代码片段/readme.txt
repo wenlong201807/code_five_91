@@ -24,3 +24,7 @@ https://mp.weixin.qq.com/s?__biz=MzI0MzIyMDM5Ng==&mid=2649829027&idx=2&sn=1a4330
 
 [中中中点][源码系列学习] vue源码 https://www.bilibili.com/video/BV1bS4y1T7ng/
 [中中中点][源码系列学习] element ui源码https://www.bilibili.com/video/BV19h411h7Se/?spm_id_from=333.788.recommend_more_video.14
+
+[axios源码实现]
+视频对应的文档：https://docs.qq.com/doc/DVWVjaXlmRXNNckNN
+视频对应的git地址：https://github.com/386083520/axios2
