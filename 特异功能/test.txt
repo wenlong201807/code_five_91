@@ -5,3 +5,6 @@
 // 三 https://www.cnblogs.com/jiangxiaobo/p/5695947.html
 // 四 https://www.cnblogs.com/jiangxiaobo/p/5696001.html // 自定义div
 // 五 https://www.cnblogs.com/jiangxiaobo/p/5696016.html
+
+通过js获取内网ip和外网ip
+https://www.cnblogs.com/wjyz/p/10638584.html
