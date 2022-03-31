@@ -13,6 +13,7 @@ class PromisePool {
   start(urls) {
     this.urls = urls; //先循环把并发池塞满
     while (this.pool.length < this.max) {
+      debugger
       let url = this.urls.shift();
       this.setTask(url);
     }
@@ -21,7 +22,7 @@ class PromisePool {
     return this.run(race);
   }
   run(race) {
-    race.then((res) => {
+    race.then(() => {
       //每当并发池跑完一个任务，就再塞入一个任务
       let url = this.urls.shift();
       this.setTask(url);
@@ -33,7 +34,7 @@ class PromisePool {
     let task = this.fn(url);
     this.pool.push(task); //将该任务推入pool并发池中
     // console.log(`\x1B[43m ${url} 开始，当前并发数：${this.pool.length}`);
-    task.then((res) => {
+    task.then(() => {
       //请求结束后将该Promise任务从并发池中移除
       this.pool.splice(this.pool.indexOf(task), 1);
       // console.log(`\x1B[43m ${url} 结束，当前并发数：${this.pool.length}`);
