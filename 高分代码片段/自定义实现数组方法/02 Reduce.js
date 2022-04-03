@@ -6,7 +6,7 @@ Array.prototype.myReduce = function (callbackFn) {
   if (accumulator === undefined) {
     // 没有初始值的空数组调用reduce会报错
     if (_arr.length === 0) {
-      throw new Error('initVal and Array.length>0 need one');
+      throw new Error("initVal and Array.length>0 need one");
     }
     // 初始值赋值为数组第一个元素
     accumulator = _arr[i];
