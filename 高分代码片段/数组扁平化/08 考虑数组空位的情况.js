@@ -34,8 +34,8 @@ Array.prototype.fakeFlat = function(num = 1) {
   });
   return arr;
 };
-const arr = [1, [3, 4], , ,];
-arr.fakeFlat()
+const arr2 = [1, [3, 4], , ,];
+arr2.fakeFlat()
 // [1, 3, 4]
 
 
