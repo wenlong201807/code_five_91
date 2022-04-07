@@ -1,0 +1,42 @@
+您好，我是朱文龙，可以叫我文龙
+个人信息与简历中描述一致
+目前就职于汽车之间，在国际部，大概有一年半时间了。
+
+Hello, my name is Zhu Wenlong, well you can call me long
+The personal information is consistent with the description in the resume
+At present, I have been working in the international department for about a year and a half.
+
+
+我们的产品定位为一站式线上汽车平台，YesAuto以线上汽车交易及内容平台作为切入点打入英德两国市场，将在线上寻求租车、全款或贷款购车信息的C端用户与经销商、主机厂、第三方金融机构等B端用户的线上商品和服务方案进行实时连接
+
+Our products are positioned as a one-stop online automobile platform. 
+Yeauto takes the online automobile transaction and content platform as the entry point to enter the markets of Britain and Germany, 
+and connects the online goods and service solutions of toC users who seek online car rental, full payment or loan purchase information with toB users such as dealers, OEMs and third-party financial institutions in real time
+
+自定义埋点方案
+Custom buried point scheme
+
+
+响应式web设计
+Responsive Web Design
+
+pc端支持150%浏览
+PC side supports 150% browsing
+
+
+核心页面nps反馈
+Core page NPs feedback
+
+5 years working experience in web front end
+
+yesauto 官网
+Yeauto official website
+
+
+竞品
+Competitive products
+
+技术栈 Technology stack
+
+设计方案包含且不限
+The design scheme includes and is not limited to
