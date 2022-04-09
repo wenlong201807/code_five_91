@@ -46,3 +46,9 @@ LRUCache.prototype.put = function (key, value) {
  * var param_1 = obj.get(key)
  * obj.put(key,value)
  */
+
+const aa = [1,2,3]
+const b = aa.splice(1,1)
+aa.push(b[0])
+console.log(b)
+console.log(aa)
