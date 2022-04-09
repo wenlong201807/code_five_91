@@ -1,5 +1,7 @@
 /**
  * 通关 https://leetcode-cn.com/problems/median-of-two-sorted-arrays/submissions/
+ * 详细题解
+ * https://leetcode-cn.com/problems/median-of-two-sorted-arrays/solution/er-fen-tu-jie-dai-ma-jian-ji-by-chen-wei-c3u4/
  * @param {number[]} nums1
  * @param {number[]} nums2
  * @return {number}
