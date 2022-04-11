@@ -45,7 +45,7 @@ var minOperations = function (nums, x) {
     let j = binarysearch(sumR, x - sumL[i]);// 查找剩余数量
     if (j === -1) continue;
     if (i + j > len) continue;
-    if (ans === -1 || ans > i + j) ans = i + j; b
+    if (ans === -1 || ans > i + j) ans = i + j;
   }
 
   return ans;

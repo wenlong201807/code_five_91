@@ -14,6 +14,8 @@ var twoSum1  = function (nums, target) {
       map.set(nums[i], i)
     }
   }
+
+  return [-1, -1]
 };
 
 const twoSum = (nums, target) => {
@@ -26,5 +28,5 @@ const twoSum = (nums, target) => {
     }
   }
 
-  return [];
+  return [-1, -1]
 }
