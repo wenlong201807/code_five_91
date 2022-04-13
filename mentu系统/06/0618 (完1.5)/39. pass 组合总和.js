@@ -8,11 +8,11 @@
 var combinationSum = function (candidates, target) {
   const ans = [];
   const dfs = (target, combine, idx) => {
-    if (idx == candidates.length) {
+    if (idx == candidates.length) {// 遍历到头了，只能结束
       return;
     }
 
-    if (target === 0) {
+    if (target === 0) {// 刚好匹配上了，那么这个组合存入结果中，这次查询结束
       ans.push(combine);
       return;
     }
@@ -21,7 +21,7 @@ var combinationSum = function (candidates, target) {
 
     // 选择当前的数据
     if (target - candidates[idx] >= 0) {
-      // 查多少，补多少
+      // 差多少，补多少
       dfs(target - candidates[idx], [...combine, candidates[idx]], idx);
     }
   }

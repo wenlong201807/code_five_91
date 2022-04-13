@@ -13,7 +13,6 @@ class PromisePool {
   start(urls) {
     this.urls = urls; //先循环把并发池塞满
     while (this.pool.length < this.max) {
-      debugger
       let url = this.urls.shift();
       this.setTask(url);
     }
@@ -88,3 +87,63 @@ pool.start(URLS);
 // 这个地方就是不断通过递归的方式，每当并发池跑完一个任务，就再塞入一个任务
 
 // npm中有很多实现这个功能的第三方包，比如async-pool、es6-promise-pool、p-limit，也可以直接拿来用
+
+
+// https://www.cnblogs.com/fuGuy/p/13112876.html
+
+// 其他 https://www.cnblogs.com/wjyz/p/10541581.html
+
+//promise并发限制
+class PromisePool {
+  constructor(max, fn) {
+    this.max = max; //最大并发量
+    this.fn = fn; //自定义的请求函数
+    this.pool = []; //并发池
+    this.urls = []; //剩余的请求地址
+  }
+  start(urls) {
+    this.urls = urls; 
+    while (this.pool.length < this.max) { // 先循环把并发池塞满
+      let url = this.urls.shift();
+      this.setTask(url);
+    }
+    return this.run(Promise.race(this.pool)); //利用Promise.race方法来获得并发池中某任务完成的信号
+  }
+  run(race) {
+    race.then(() => {
+      let url = this.urls.shift(); // 每当并发池跑完一个任务，就再塞入一个任务
+      this.setTask(url);
+      return this.run(Promise.race(this.pool));
+    });
+  }
+  setTask(url) {
+    if (!url) return;
+    let task = this.fn(url);
+    this.pool.push(task); //将该任务推入pool并发池中
+    task.then(() => {
+      this.pool.splice(this.pool.indexOf(task), 1);
+    });
+  }
+}
+//test
+const URLS = [
+  "bytedance.com",
+  "tencent.com",
+  "alibaba.com",
+  "microsoft.com",
+  "apple.com",
+  "hulu.com",
+  "amazon.com",
+];
+//自定义请求函数
+var requestFn = (url) => {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve(`任务${url}完成`);
+    }, 1000);
+  }).then((res) => {
+    console.log("外部逻辑", res);
+  });
+};
+const pool = new PromisePool(3, requestFn); //并发数为5
+pool.start(URLS);
