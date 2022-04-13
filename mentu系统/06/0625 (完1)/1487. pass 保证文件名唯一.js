@@ -5,6 +5,7 @@
  */
 var getFolderNames = function (names) {
   let d = {}, ans = [];
+  debugger
   for (const f of names) {
     let s = f;
     while (s in d) {
@@ -16,3 +17,6 @@ var getFolderNames = function (names) {
   }
   return ans;
 };
+
+const names = ["gta","gta(1)","gta","avalon"];
+getFolderNames(names)

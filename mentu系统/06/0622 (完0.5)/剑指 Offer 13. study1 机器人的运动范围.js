@@ -9,7 +9,7 @@ var movingCount = function (m, n, k) {
   function getSum (num) {
     let answer = 0;
     while (num) {
-      answer += num % 10;
+      answer = num % 10;
       num = Math.floor(num / 10);
     }
     return answer;
