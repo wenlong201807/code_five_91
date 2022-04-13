@@ -12,8 +12,8 @@ var findTargetSumWays = function (nums, target) {
         count++;
       }
     } else {
-      dfs(nums, target, index + 1, sum + nums[index]);
       dfs(nums, target, index + 1, sum - nums[index]);
+      dfs(nums, target, index + 1, sum + nums[index]);
     }
   }
 
