@@ -2,9 +2,10 @@
 var MyHashSet = function () {
   this.BASE = 100;
   this.data = new Array(this.BASE).fill(0).map(() => new Array());
+  // [[], [], ...共100个]
 };
 MyHashSet.prototype.hash = function (key) {
-  return key % this.BASE;
+  return key % this.BASE; // 正整数，小于base，以后的索引
 };
 /** 
  * @param {number} key
@@ -13,11 +14,11 @@ MyHashSet.prototype.hash = function (key) {
 MyHashSet.prototype.add = function (key) {
   const h = this.hash(key)
   for (const x of this.data[h]) {
-    if (x === key) {
+    if (x === key) { // 如果已经存在了，就不能再添加
       return;
     }
   }
-  this.data[h].push(key)
+  this.data[h].push(key)// 配合最初设置的存储数据结构
 };
 
 /** 
@@ -30,7 +31,7 @@ MyHashSet.prototype.remove = function (key) {
   for (let i = 0; i < it.length; ++i) {
     if (it[i] === key) {
       it.splice(i, 1)
-      return;
+      return; // 优化点
     }
   }
 };
