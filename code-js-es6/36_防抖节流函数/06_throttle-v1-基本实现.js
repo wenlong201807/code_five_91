@@ -1,6 +1,6 @@
 function throttle(fn, interval, options) {
   // 1.记录上一次的开始时间
-  let lastTime = 0
+  let lastTime = new Date().getTime()
 
   // 2.事件触发时, 真正执行的函数
   const _throttle = function() {
