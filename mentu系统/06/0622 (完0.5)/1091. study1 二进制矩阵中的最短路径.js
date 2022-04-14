@@ -18,7 +18,7 @@ var shortestPathBinaryMatrix = function (grid) {
   }
 
   let queue = [[0, 0]];// 使用队列进行BFS搜索
-  let level = 1;// 缓存路径长度，七点的长度为1
+  let level = 1;// 缓存路径长度，起点的长度为1
   // 可以向四周所有方向行走，缓存8个方向
   const direction = [
     [-1, 1],// 右上

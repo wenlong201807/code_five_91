@@ -6,7 +6,7 @@
  * }
  */
 /**
- * @param {TreeNode} r oot
+ * @param {TreeNode} root
  * @param {TreeNode} target
  * @param {number} k
  * @return {number[]}
@@ -59,6 +59,13 @@ var distanceK1 = function (root, target, k) {
   return res;
 };
 
+/*
+目标结点target距离为K的节点，可以是子节点，也可以是父节点
+所以遍历方向有三个：左子节点、右子节点、父节点
+首先利用map记录所有节点的父节点
+再深度优先遍历左子节点、右子节点、父节点
+
+*/
 const distanceK = (root, target, k) => {
   // 存放每个节点的父节点的map
   const parents = new Map();

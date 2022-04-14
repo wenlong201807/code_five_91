@@ -17,3 +17,6 @@ var jump = function (nums) {
   }
   return steps;
 };
+
+// 贪心系列
+// https://leetcode-cn.com/problems/jump-game-ii/solution/dai-ma-sui-xiang-lu-dai-ni-xue-tou-tan-x-uqd0/
